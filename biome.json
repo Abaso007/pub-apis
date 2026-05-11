@@ -15,7 +15,9 @@
       "!src/components/ui/**/*",
       "!src/**/*/utils.ts",
       "!src/**/*.css",
-      "!*.d.ts"
+      "!*.d.ts",
+      "!.agents",
+      "!.claude"
     ]
   },
   "formatter": {
