@@ -12,7 +12,7 @@
       "*.config.ts",
       "*.{js,ts,json,md}",
       "!turbo",
-      "!src/components/ui/**/*",
+      "!src/lib/components/ui/**/*",
       "!src/**/*/utils.ts",
       "!src/**/*.css",
       "!*.d.ts",
