@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.4/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -16,6 +16,8 @@
       "!src/**/*/utils.ts",
       "!src/**/*.css",
       "!*.d.ts",
+      "!*.svg",
+      "!**/*.svg",
       "!.agents",
       "!.claude"
     ]
@@ -30,7 +32,7 @@
       "next": "recommended"
     },
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "a11y": {
         "useSemanticElements": "error"
       },

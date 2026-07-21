@@ -9,7 +9,7 @@ export const fetchResources = async (file: string) => {
     path: `/db/${file}.json`,
   });
 
-  if (data.download_url) {
+  if (!Array.isArray(data) && data.type === 'file' && data.download_url) {
     const result = await fetch(data.download_url);
 
     if (!result.ok) {
