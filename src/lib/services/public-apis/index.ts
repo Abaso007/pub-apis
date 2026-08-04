@@ -1,6 +1,8 @@
 import { Octokit } from 'octokit';
 
 export const fetchResources = async (file: string) => {
+  'use cache';
+
   const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
 
   const { data } = await octokit.rest.repos.getContent({

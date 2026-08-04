@@ -1,9 +1,17 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import { EVENT_TYPE_LINK } from '@/lib/constants/events';
 import { trackEvent } from '@/lib/utils/trackEvent';
 
 const Footer = () => {
+  const [currentYear, setCurrentYear] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(String(new Date().getFullYear()));
+  }, []);
+
   const handleClickSite = () => {
     trackEvent({
       eventName: 'Click sznm.dev',
@@ -15,7 +23,7 @@ const Footer = () => {
     <footer className="flex w-full justify-center self-end">
       <div className="text-center">
         <p className="text-sm sm:text-base">
-          {new Date().getFullYear()}
+          {currentYear}
           {' | '}
           <a
             href="https://sznm.dev"
